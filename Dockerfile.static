@@ -1,0 +1,8 @@
+# vim: set syntax=dockerfile:
+FROM tianon/true
+
+COPY ["redis-diff", \
+      "/app/"]
+
+ENTRYPOINT ["/app/redis-diff"]
+CMD []

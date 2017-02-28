@@ -38,6 +38,14 @@ key6|valuedb1|valuedb2
 
 ```
 
+## Docker Image
+
+Build your own image using `docker build_docker_final`, then you can use:
+
+```
+docker run --net=host --rm zph/redis-diff:latest -dst redis:://destination:6379 -src redis://source:6379
+```
+
 ## Performance
 Iterates through src keyspace at ~500 to 1000 keys per second on my development
 machine when pointed at hosted redis instance on separate machine.
